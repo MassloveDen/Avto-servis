@@ -1,0 +1,19 @@
+{% extends 'dealcent/head.html' %}
+{% load static %}
+
+{% block title %} Машины {% endblock %}
+
+{% block content %}
+    <h3>Характеристики авто</h3>
+        <p>Модель</p>
+        {% for i in models %}
+            <ul><button>{{i}}</button></ul>
+        {% endfor %}
+
+        <p>Цвет</p>
+        {% for i in colors %}
+            <ul><button>{{i}}</button></ul>
+        {% endfor %}
+
+
+{% endblock %}
