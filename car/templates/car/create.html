@@ -1,0 +1,27 @@
+
+{% extends 'dealcent/head.html' %}
+
+{% block title %} Создать конфигурацию {% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма по добавлению авто</h1>
+        <form method="post">
+            {% csrf_token %}
+
+
+            <p>
+                Наименование: {{ form.title }}<br>
+                VIN: {{ form.vin }}<br>
+                Марка: {{ form.mark }}<br>
+                Модель: {{ form.modl }}<br>
+                Цвет: {{ form.color }}<br>
+                <span>{{ error }}</span>
+            </p>
+
+            <p><button class="btn btn-success" type ="submit">Добавить конфигурацию</button></p>
+        </form>
+    </div>
+
+
+{% endblock %}

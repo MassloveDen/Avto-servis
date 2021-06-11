@@ -5,6 +5,6 @@ from . import views
 urlpatterns = [
     path('', views.car_mark, name='cars'),
     path('char', views.char, name='char'),
-
+    path('create_car', views.create_car, name='create_car')
     # path('', views.avto, name='cars'),
 ]
