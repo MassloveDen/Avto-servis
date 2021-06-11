@@ -4,16 +4,16 @@
 
 {% block content %}
     <h3>Выберите марку</h3>
-    <h3><a href="{% url 'char' %}"><button class="btn btn-warning ">Уведет к выбору марки </button></a></h3>
+    <h3><a href=""><button class="btn btn-warning ">Уведет к выбору марки </button></a></h3>
+        <button>Выбрать конфигурацию</button>
         {% for i in marks %}
             <ul><button>{{i}}</button> </ul>
         {% endfor %}
-    <h3>Авто на складе</h3>
-    {% for i in avto %}
-        <p>{{i.mark}} {{i.modl}} {{i.color}}</p>
-
-
-    {% endfor %}
+    <h3>Список авто на складе</h3>
+    <a href="{% url 'char' %}"><button>Посмотреть</button></a>
+        {% for i in avto %}
+            <p>{{i.mark}} {{i.modl}} {{i.color}}</p>
+        {% endfor %}
 
 
 {% endblock %}

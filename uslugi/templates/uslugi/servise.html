@@ -5,10 +5,10 @@
 {% block content %}
     <h3>Список услуг</h3>
         <ul>
-            <a href=""><h1>Продажа</h1> </a>
-            <a href=""><h1>Ремонт</h1> </a>
+            <a href="{% url 'price' %}"><h1>Продажа</h1> </a>
+            <a href="{% url 'repair' %}"><h1>Ремонт</h1> </a>
             <a href=""><h1>Запчасти</h1> </a>
-            <a href=""><h1>Склад авто</h1> </a>
+            <a href="{% url 'char' %}"><h1>Склад авто</h1> </a>
         </ul>
 {% include 'dealcent/test.html' %}
 {% endblock %}

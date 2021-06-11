@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <p>Продажа</p>
-</body>
-</html>
+{% extends 'dealcent/head.html' %}
+{% load static %}
+{% block title %} Стоимость продажи {% endblock %}
+
+{% block content %}
+    <h2>Цена продажи</h2>
+        {% for i in sail %}
+            <button> {{i}} </button>
+        {% endfor %}
+{% endblock %}

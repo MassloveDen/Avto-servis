@@ -1,11 +1,18 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from .models import Sail, Uslugi, Repair
+
+
 # Create your views here.
 
 
+
+
+
 def servise(request):
-    return render(request, 'uslugi/servise.html')
+    servise = Uslugi.objects.all()
+    return render(request, 'uslugi/servise.html', {'servise': servise})
 
 def scladavto(request):
     return render(request, "dealcent/scladavto.html")
@@ -14,7 +21,9 @@ def scladzp(request):
     return render(request, "dealcent/scladzp.html")
 
 def sail(request):
-    return render(request, "uslugi/sail.html")
+    sail = Sail.objects.all()
+    return render(request, "uslugi/sail.html", {'sail': sail})
 
 def repair(request):
-    return render(request, "uslugi/repair.html")
+    repair = Repair.objects.all()
+    return render(request, "uslugi/repair.html", {'repair': repair})

@@ -4,8 +4,12 @@
 
 {% block content %}
     <h3>Список центров</h3>
-        <ul>
-            Из базы данных притянуть queryset
-        </ul>
 
+
+
+        {% for i in list %}
+            <div>
+                <a href=""><p>{{i}}</p></a>
+            </div>
+        {% endfor %}
 {% endblock %}

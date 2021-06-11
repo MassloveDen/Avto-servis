@@ -5,15 +5,14 @@
 
 {% block content %}
     <h3>Характеристики авто</h3>
-        <p>Модель</p>
-        {% for i in models %}
-            <ul><button>{{i}}</button></ul>
-        {% endfor %}
 
-        <p>Цвет</p>
-        {% for i in colors %}
-            <ul><button>{{i}}</button></ul>
+        {% for i in avto %}
+            <p>
+                <ul>Марка: {{i.mark}}</ul>
+                <ul>Модель:{{i.modl}}</ul>
+                <ul> Цвет: {{i.color}}</ul>
+            </p>
+            <button>Приобрести(связать с ценой)</button>
         {% endfor %}
-
 
 {% endblock %}

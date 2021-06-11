@@ -18,5 +18,6 @@ def car_mark(request):
 def char(request):
     colors = Color.objects.all()
     models = Modl.objects.all()
+    avto = Car.objects.order_by('title')
+    return render(request, "car/char.html", {'colors': colors, 'models': models, 'avto': avto})
 
-    return render(request, "car/char.html", {'colors': colors, 'models': models})
