@@ -4,12 +4,12 @@
 
 {% block content %}
     <h3>Список центров</h3>
-
-
-
         {% for i in list %}
             <div>
-                <a href=""><p>{{i}}</p></a>
+                <h1>{{i}}</h1>
+                <a href="{% url 'cent_detail' i.id %}">
+                    <button class="btn btn-warning">Подробнее о центре</button>
+                </a>
             </div>
         {% endfor %}
 {% endblock %}

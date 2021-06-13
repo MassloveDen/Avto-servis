@@ -4,15 +4,23 @@
 {% block title %} Машины {% endblock %}
 
 {% block content %}
-    <h3>Характеристики авто</h3>
-
+    <h3>Список авто</h3>
+    {% for i in avto %}
+        <p>{{i}}</p>
+        <a href="{% url 'car_detail' i.vin %}">
+            <button>Просмотр характеристик</button>
+        </a>
+    {% endfor %}
+    <!--<ul>{{ car_detail }}</ul>
         {% for i in avto %}
+
             <p>
                 <ul>Марка: {{i.mark}}</ul>
-                <ul>Модель:{{i.modl}}</ul>
+                <ul>Модель: {{i.modl}}</ul>
                 <ul> Цвет: {{i.color}}</ul>
+
             </p>
-            <button>Приобрести(связать с ценой)</button>
-        {% endfor %}
+            <button>Подробнее(Уведет к DetailView, связать с ценой)</button>
+        {% endfor %}-->
 
 {% endblock %}

@@ -21,7 +21,9 @@ aside .logo {
     position: relative;
     top: -5px;
 }
-
+div {
+    text-align: center;
+}
 aside h3 {
     margin-top: 50px;
     font-size: 30px;

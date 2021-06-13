@@ -40,6 +40,8 @@ class Modl(models.Model):
 class Car(models.Model):
     title = models.CharField("Авто", max_length=100)
     vin = models.CharField("VIN", max_length=20, primary_key=True, unique=True)
+    # vin = models.CharField("VIN", max_length=20, unique=True)
+
     # car_pic = models.ImageField("Изображение авто", upload_to="static/img/")
     mark = models.ForeignKey(Mark, verbose_name="Марка", on_delete=models.CASCADE)
     modl = models.ForeignKey(Modl, verbose_name="Модель", on_delete=models.CASCADE)
@@ -52,3 +54,22 @@ class Car(models.Model):
     class Meta:
         verbose_name = 'Автомобиль'
         verbose_name_plural = 'Автомобили'
+
+
+class New_Car(models.Model):
+    title = models.CharField("Авто", max_length=100)
+    vin = models.CharField("VIN", max_length=20, primary_key=True, unique=True)
+    # vin = models.CharField("VIN", max_length=20, unique=True)
+
+    # car_pic = models.ImageField("Изображение авто", upload_to="static/img/")
+    mark = models.ForeignKey(Mark, verbose_name="Марка", on_delete=models.CASCADE)
+    modl = models.ForeignKey(Modl, verbose_name="Модель", on_delete=models.CASCADE)
+    color = models.ForeignKey(Color, verbose_name="Цвет", on_delete=models.CASCADE)
+    # sail =
+    # repair =
+    def __str__(self):
+        return f'Авто: {self.title}'
+
+    class Meta:
+        verbose_name = 'Авто'
+        verbose_name_plural = 'Автомн'

@@ -3,17 +3,17 @@
 {% block title %} Машины {% endblock %}
 
 {% block content %}
+    <div text-align="center">
     <h3>Выберите марку</h3>
     <h3><a href=""><button class="btn btn-warning ">Уведет к выбору марки </button></a></h3>
-        <a href="{% url 'create_car' %}"><button>Выбрать конфигурацию</button></a>
+        <a href="{% url 'create_car' %}"><button>Выбрать конфигурацию</button></a><br>
+        <a href=""><p>Марки нужны дилерам: </p></a>
         {% for i in marks %}
-            <ul><button>Марки нужны дилерам:{{i}}</button></ul>
+            <ul>{{i}}</ul>
         {% endfor %}
     <h3>Список авто на складе</h3>
     <a href="{% url 'char' %}"><button>Посмотреть</button></a>
-        {% for i in avto %}
-            <p>{{i.mark}} {{i.modl}} {{i.color}}</p>
-        {% endfor %}
 
+    </div>
 
 {% endblock %}

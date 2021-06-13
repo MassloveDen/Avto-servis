@@ -1,0 +1,15 @@
+{% extends 'dealcent/head.html' %}
+{% load static %}
+{% block title %}Подробности конфигурации{% endblock %}
+
+{% block content %}
+
+    <h1>{{ car_detail }}</h1>
+    <p>Марка: {{ car_detail.mark }}</p>
+    <p>Модель: {{ car_detail.modl }}</p>
+    <p>Цвет: {{ car_detail.color }}</p>
+
+
+
+
+{% endblock %}

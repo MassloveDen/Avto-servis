@@ -7,9 +7,6 @@ from .models import Sail, Uslugi, Repair
 # Create your views here.
 
 
-
-
-
 def servise(request):
     servise = Uslugi.objects.all()
     return render(request, 'uslugi/servise.html', {'servise': servise})

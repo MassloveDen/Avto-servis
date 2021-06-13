@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.views.generic import DetailView
+
 from .models import DealCent
 
 
@@ -17,3 +19,7 @@ def dil_list(request):
     cent = DealCent.objects.all()
     return render(request, "dealcent/centers.html", {'list': cent})
 
+class CentDetailView(DetailView):
+    model = DealCent
+    template_name = 'dealcent/cent_detail.html'
+    context_object_name = 'cent_detail'
