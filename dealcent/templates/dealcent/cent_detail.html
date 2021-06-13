@@ -1,0 +1,16 @@
+{% extends 'dealcent/head.html' %}
+{% load static %}
+{% block title %}Услуги дилерского центра{% endblock %}
+
+{% block content %}
+
+    <h1>{{ cent_detail }}</h1>
+    <p>Подробнее:</p>
+    <p> ID центра: {{ cent_detail.id }}</p>
+    <button class="btn btn-warning">{{ cent_detail.name }}</button>
+
+
+
+
+
+{% endblock %}
